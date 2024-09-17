@@ -1,0 +1,2 @@
+Nama = Nabila
+Kelas = A

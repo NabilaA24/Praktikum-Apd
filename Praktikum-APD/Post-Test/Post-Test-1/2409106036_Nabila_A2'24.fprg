@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2409106036_Nabila_A2'24"/>
+        <attribute name="authors" value="Asus"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-08 09:38:17 PM"/>
+        <attribute name="created" value="QXN1cztMQVBUT1AtR000RjBJVjE7MjAyNC0wOS0wODswODo1Mzo0MCBBTTsyNzIx"/>
+        <attribute name="edited" value="QXN1cztMQVBUT1AtR000RjBJVjE7MjAyNC0wOS0wODswOTozODoxNyBQTTsyOzI4NTM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="LamaCicilan, JumlahBulan" type="Integer" array="False" size=""/>
+            <declare name="JumlahPinjaman, BungaPerTahun, BungaPerBulan, TotalCicilanPerBulan" type="Real" array="False" size=""/>
+            <assign variable="JumlahPinjaman" expression="17000000"/>
+            <output expression="&quot;Input lama cicilan&quot;" newline="True"/>
+            <input variable="LamaCicilan"/>
+            <if expression="LamaCicilan == 1">
+                <then>
+                    <assign variable="BungaPerTahun" expression="0.07"/>
+                    <assign variable="JumlahBulan" expression="12"/>
+                </then>
+                <else>
+                    <if expression="LamaCicilan == 2">
+                        <then>
+                            <assign variable="BungaPerTahun" expression="0.13"/>
+                            <assign variable="JumlahBulan" expression="24"/>
+                        </then>
+                        <else>
+                            <if expression="LamaCicilan == 3">
+                                <then>
+                                    <assign variable="BungaPerTahun" expression="0.19"/>
+                                    <assign variable="JumlahBulan" expression="36"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="BungaPerBulan" expression="(BungaPerTahun/12)*JumlahPinjaman"/>
+            <output expression="&quot;Bunga per bulan adalah =&quot;" newline="True"/>
+            <output expression="BungaPerBulan" newline="True"/>
+            <assign variable="TotalCicilanPerBulan" expression="(JumlahPinjaman+BungaPerBulan) / JumlahBulan"/>
+            <output expression="&quot;Total Cicilan Per Bulan adalah = &quot;" newline="True"/>
+            <output expression="TotalCicilanPerBulan" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
